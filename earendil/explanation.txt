@@ -1,0 +1,5 @@
+Light of Erandil!
+Richard Williams 2017
+
+
+The photoresistor is connected to 3.3V on one side and a both a GPIO pin and the ground through a capacitor. The GPIO pin is digital, so it can only detect a high or low voltage. When the light is turned off the resistance is high and the capacitor charges slowly. I have the GPIO pin on the raspberry pi measure the time it takes the capacitor to charge. It's a really simple loop that basically sets the pin as an output to make the voltage near 0V, then it sets it as an input and counts how long it takes to reach high voltage. Then I just experimented to find an RC time that corresponds to "dark" and have another pin turn on an LED if its dark
